@@ -20,7 +20,7 @@ def send_email(report_file):
         smtp = smtplib.SMTP_SSL(smtp_server)  # smtp服务器地址 使用SSL模式
         smtp.login(smtp_user, smtp_password)  # 用户名和密码
         smtp.sendmail(sender,receiver, msg.as_string())
-        smtp.sendmail(sender, receiver_two, msg.as_string())  # 发送给另一个邮箱
+        # smtp.sendmail(sender, receiver_two, msg.as_string())  # 发送给另一个邮箱
         logging.info("邮件发送完成！")
     except Exception as e:
         logging.error(str(e))

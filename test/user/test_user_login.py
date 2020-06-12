@@ -13,18 +13,7 @@ import json
 class TestUserLogin(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.request_headers = {
-            "Accept": "application/json, text/plain, */*",
-            "Accept-Encoding": "gzip, deflate",
-            "Accept-Language": "zh-CN,zh;q=0.9",
-            "Connection": "keep-alive",
-            "Content-Length": "60",
-            "Content-Type": "application/json;charset=UTF-8",
-            "Host": "172.16.170.49",
-            "Origin": "http://172.16.170.49",
-            "Referer": "http://172.16.170.49/supervise/",
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-        }
+        self.request_headers = request_headers
         self.data_list=excel_to_list(os.path.join(data_path,'test_data.xlsx'), "TestUserLogin")
 
     def test_user_login_noraml(self):
