@@ -2,21 +2,18 @@ import requests
 from config.config import *
 import json
 
+def get_session():
+    header_login = request_headers
+    url_login = 'http://172.16.170.49/cms/api/user/login'
+    requests_string_login = {
+        "sn": "test",
+        "password": "D5BCF1D75F6C61A276B0701AC2933765"
+    }
+    session = requests.Session()
+    session.post(url_login, header_login, json=requests_string_login)
 
-session=requests.Session()
-
-header_login=request_headers
-url_login='http://172.16.170.49/cms/api/user/login'
-requests_string_login={
-            "sn": "test",
-            "password": "D5BCF1D75F6C61A276B0701AC2933765"
-        }
-
-response=session.post(url_login,header_login,json=requests_string_login)
-print(json.loads(response.text))
-
-
-
+def close_session():
+    get_session().session.close()
 
 
 
