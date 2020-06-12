@@ -125,9 +125,9 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">经费监管测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> 柴珍珍</p>
-<p class='attribute'><strong>开始时间 : </strong> 2020-06-11 15:34:06</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.070970</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 2，失败 2，通过率= 0.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-06-12 16:15:23</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.106938</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 2，通过 2，通过率= 100.00%</p>
 
 <p class='description'>测试用例情况：</p>
 </div>
@@ -135,10 +135,10 @@ function html_escape(s) {
 
 
     <p id='show_detail_line'>
-    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [0.00% ]</a>
-    <a class="btn btn-success" href='javascript:showCase(2)'>通过[ 0 ]</a>
+    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [100.00% ]</a>
+    <a class="btn btn-success" href='javascript:showCase(2)'>通过[ 2 ]</a>
     <a class="btn btn-warning" href='javascript:showCase(3)'>错误[ 0 ]</a>
-    <a class="btn btn-danger" href='javascript:showCase(1)'>失败[ 2 ]</a>
+    <a class="btn btn-danger" href='javascript:showCase(1)'>失败[ 0 ]</a>
     <a class="btn btn-info" href='javascript:showCase(4)'>所有[ 2 ]</a>
     </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
@@ -159,68 +159,32 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='failClass warning'>
+<tr class='passClass warning'>
     <td>test.user.test_user_login.TestUserLogin</td>
     <td class="text-center">2</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
     <td class="text-center">2</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',2)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='ft1_1' class='none'>
-    <td class='failCase'><div class='testcase'>test_user_login_noraml</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
-    <div id='div_ft1_1' class="collapse">  -->
-
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
-    <div id='div_ft1_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
-    <pre>
-    
-ft1_1: Traceback (most recent call last):
-  File "D:\python_work\jfjg_api_test\test\user\test_user_login.py", line 46, in test_user_login_noraml
-    self.assertEqual(response_expect,response_results)
-AssertionError: '{"status":true,"code":200,"message":null[144 chars]:{}}' != {'status': False, 'code': 50021, 'message[661 chars]1]'}}
-
-
-    </pre>
-    </div>
-    </td>
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_user_login_noraml</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
-<tr id='ft1_2' class='none'>
-    <td class='failCase'><div class='testcase'>test_user_login_wrong</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_2'>失败</button>
-    <div id='div_ft1_2' class="collapse">  -->
-
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_2'>失败</button>
-    <div id='div_ft1_2' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
-    <pre>
-    
-ft1_2: Traceback (most recent call last):
-  File "D:\python_work\jfjg_api_test\test\user\test_user_login.py", line 64, in test_user_login_wrong
-    self.assertEqual(response_expect, response_results)
-AssertionError: '{"status":false,"code":0,"message":"用户名或[35 chars]:{}}' != {'status': False, 'code': 50021, 'message[611 chars]1]'}}
-
-
-    </pre>
-    </div>
-    </td>
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_user_login_wrong</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
     <td>2</td>
-    <td>0</td>
-    <td>0</td>
     <td>2</td>
-    <td>通过率：0.00%</td>
+    <td>0</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
 </tr>
 </table>
 

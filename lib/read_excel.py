@@ -16,7 +16,11 @@ def get_test_data(data_list,case_name):
         if case_name==case_data['case_name']:
             return case_data
 
-# data_list=excel_to_list("test_data.xlsx","TestUserLogin")
+# data_list=excel_to_list(r"D:\python_work\jfjg_api_test\data\test_data.xlsx","TestUserLogin")
 # case_data=get_test_data(data_list,"test_user_login_normal")
 # print(case_data['url'])
+# print(case_data['args'])
+# print(case_data['expect_res'])
+# print(type(case_data['args']))
+
 

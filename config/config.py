@@ -32,7 +32,7 @@ db_host='172.16.170.49'
 db_port=3306
 db_user='exp'
 db_passwd='xdkj@2020'
-db='expenditure_supervise_cms'
+db='expenditure_supervise'
 
 # 邮件配置
 smtp_server='smtp.exmail.qq.com'

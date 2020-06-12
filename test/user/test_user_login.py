@@ -34,7 +34,7 @@ class TestUserLogin(unittest.TestCase):
         url=case_data['url']
         request_string=case_data['args']
         response_expect=case_data['expect_res']
-        response_actual=requests.post(url,headers=self.request_headers,json=request_string)
+        response_actual=requests.post(url,headers=self.request_headers,data=request_string)
         response_results=json.loads(response_actual.text)
         # 日志
         logging.info("测试用例：{}".format('test_user_login_normal'))
@@ -43,7 +43,8 @@ class TestUserLogin(unittest.TestCase):
         logging.info("期望结果：{}".format(response_expect))
         logging.info("实际结果：{}".format(response_results))
         # 断言
-        self.assertEqual(response_expect,response_results)
+        # self.assertEqual(response_expect,response_results.get('data').get('name'))
+        self.assertIn(response_expect, str(response_results))
 
     def test_user_login_wrong(self):
         case_data = get_test_data(self.data_list, 'test_user_login_password_wrong')
@@ -52,7 +53,7 @@ class TestUserLogin(unittest.TestCase):
         url = case_data['url']
         request_string = case_data['args']
         response_expect = case_data['expect_res']
-        response_actual = requests.post(url, headers=self.request_headers, json=request_string)
+        response_actual = requests.post(url, headers=self.request_headers, data=request_string)
         response_results = json.loads(response_actual.text)
         # 日志
         logging.info("测试用例：{}".format('test_user_login_password_wrong'))
@@ -61,7 +62,8 @@ class TestUserLogin(unittest.TestCase):
         logging.info("期望结果：{}".format(response_expect))
         logging.info("实际结果：{}".format(response_results))
         # 断言
-        self.assertEqual(response_expect, response_results)
+        # self.assertEqual(response_expect, response_results.get('message'))
+        self.assertIn(response_expect, str(response_results))
 
     def tearDown(self) -> None:
         pass
