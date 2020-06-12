@@ -494,3 +494,20 @@ on aa.voucher_code=bb.voucher_code
 [2020-06-12 18:16:25] DEBUG [_new_conn: connectionpool.py, 226] Starting new HTTP connection (1): 172.16.170.49:80
 [2020-06-12 18:17:24] DEBUG [_new_conn: connectionpool.py, 226] Starting new HTTP connection (1): 172.16.170.49:80
 [2020-06-12 18:18:53] DEBUG [_new_conn: connectionpool.py, 226] Starting new HTTP connection (1): 172.16.170.49:80
+[2020-06-12 18:25:05] DEBUG [<module>: run_all.py, 8] =======================测试开始=======================
+[2020-06-12 18:25:05] DEBUG [_new_conn: connectionpool.py, 226] Starting new HTTP connection (1): 172.16.170.49:80
+[2020-06-12 18:25:05] DEBUG [_make_request: connectionpool.py, 433] http://172.16.170.49:80 "POST /cms/api/user/login HTTP/1.1" 200 None
+[2020-06-12 18:25:05] INFO [test_user_login_noraml: test_user_login.py, 29] 测试用例：test_user_login_normal
+[2020-06-12 18:25:05] INFO [test_user_login_noraml: test_user_login.py, 30] url：http://172.16.170.49/cms/api/user/login
+[2020-06-12 18:25:05] INFO [test_user_login_noraml: test_user_login.py, 31] 请求参数：{"sn":"test","password":"D5BCF1D75F6C61A276B0701AC2933765"}
+[2020-06-12 18:25:05] INFO [test_user_login_noraml: test_user_login.py, 32] 期望结果：柴珍珍
+[2020-06-12 18:25:05] INFO [test_user_login_noraml: test_user_login.py, 33] 实际结果：{'status': True, 'code': 200, 'message': None, 'data': {'sn': 'test', 'name': '柴珍珍', 'indexUrl': None, 'headUrl': None, 'roles': [{'id': 1, 'name': '超级管理员', 'code': '000001'}], 'initPassword': 0}, 'otherData': {}}
+[2020-06-12 18:25:05] DEBUG [_new_conn: connectionpool.py, 226] Starting new HTTP connection (1): 172.16.170.49:80
+[2020-06-12 18:25:05] DEBUG [_make_request: connectionpool.py, 433] http://172.16.170.49:80 "POST /cms/api/user/login HTTP/1.1" 200 None
+[2020-06-12 18:25:05] INFO [test_user_login_wrong: test_user_login.py, 48] 测试用例：test_user_login_password_wrong
+[2020-06-12 18:25:05] INFO [test_user_login_wrong: test_user_login.py, 49] url：http://172.16.170.49/cms/api/user/login
+[2020-06-12 18:25:05] INFO [test_user_login_wrong: test_user_login.py, 50] 请求参数：{"sn":"test","password":"1234567"}
+[2020-06-12 18:25:05] INFO [test_user_login_wrong: test_user_login.py, 51] 期望结果：用户名或密码错误，请重新输入
+[2020-06-12 18:25:05] INFO [test_user_login_wrong: test_user_login.py, 52] 实际结果：{'status': False, 'code': 0, 'message': '用户名或密码错误，请重新输入', 'data': None, 'otherData': {}}
+[2020-06-12 18:25:06] INFO [send_email: send_email.py, 24] 邮件发送完成！
+[2020-06-12 18:25:06] DEBUG [<module>: run_all.py, 23] =======================测试结束=======================
