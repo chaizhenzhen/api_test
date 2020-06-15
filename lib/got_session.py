@@ -2,10 +2,6 @@ from config.config import *
 import requests
 import json
 
-
-
-
-
 class GetSession:
     def __init__(self):
         self.header_login=request_headers
