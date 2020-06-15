@@ -2,7 +2,6 @@ import unittest
 import requests
 import os
 import sys
-from lib.db import *
 from lib.read_excel import *
 from config.config import *
 import json

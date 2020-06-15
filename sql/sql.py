@@ -46,6 +46,6 @@ on aa.voucher_code=bb.voucher_code
 ;
 '''
 
-# results=db.query(sql_keyanshouru)
+# results=database.query(sql_keyanshouru)
 # print(results)
 

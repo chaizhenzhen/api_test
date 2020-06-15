@@ -125,9 +125,9 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">经费监管测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> 柴珍珍</p>
-<p class='attribute'><strong>开始时间 : </strong> 2020-06-12 18:25:05</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.108936</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 2，通过 2，通过率= 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-06-15 11:56:44</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:19.950613</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 3，通过 2，失败 1，通过率= 66.67%</p>
 
 <p class='description'>测试用例情况：</p>
 </div>
@@ -135,11 +135,11 @@ function html_escape(s) {
 
 
     <p id='show_detail_line'>
-    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [100.00% ]</a>
+    <a class="btn btn-primary" href='javascript:showCase(0)'>通过率 [66.67% ]</a>
     <a class="btn btn-success" href='javascript:showCase(2)'>通过[ 2 ]</a>
     <a class="btn btn-warning" href='javascript:showCase(3)'>错误[ 0 ]</a>
-    <a class="btn btn-danger" href='javascript:showCase(1)'>失败[ 0 ]</a>
-    <a class="btn btn-info" href='javascript:showCase(4)'>所有[ 2 ]</a>
+    <a class="btn btn-danger" href='javascript:showCase(1)'>失败[ 1 ]</a>
+    <a class="btn btn-info" href='javascript:showCase(4)'>所有[ 3 ]</a>
     </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -178,13 +178,45 @@ function html_escape(s) {
     <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
+<tr class='failClass warning'>
+    <td>test.rule_test.rule_special.TestRuleSpecial</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center">1</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',1)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='ft2_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_rule_special_keyanshouru</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_1'>失败</button>
+    <div id='div_ft2_1' class="collapse">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_1'>失败</button>
+    <div id='div_ft2_1' class="collapse in" style='text-align: left; color:red;cursor:pointer'>
+    <pre>
+    
+ft2_1: Traceback (most recent call last):
+  File "D:\python_work\jfjg_api_test\test\rule_test\rule_special.py", line 50, in test_rule_special_keyanshouru
+    self.assertIn(voucher, str(response_results))
+AssertionError: '2019 1Q 1309' not found in "{'code': 0, 'data': {'current': 1, 'orders': [{'asc': False, 'column': 'w.warn_time'}, {'asc': False, 'column': 'w.id'}], 'pages': 25, 'records': [{'businessDate': '2019-01-16', 'code': '2020 1CZZ 59', 'creditMoney': 1000000.0, 'debitMoney': 1000001.0, 'id': 1448, 'isDelRecord': 0, 'issue': '支出管理-税务管理', 'name': '2020 1CZZ 59', 'projectCategory': None, 'projectType': None, 'read': 0, 'recentlyBusinessDate': None, 'recordNum': 2, 'ruleName': '是否计提应交增值税-科研事业收入', 'warnDays': 19, 'warnLevel': '1', 'warnTime': '2020-05-28 15:07:55'}, {'businessDate': '2019-12-12', 'code': '201912Q 9645', 'creditMoney': 2800000.0, 'debitMoney': 2800000.0, 'id': 1447, 'isDelRecord': 0, 'issue': '支出管理-税务管理', 'name': '201912Q 9645', 'projectCategory': None, 'projectType': None, 'read': 0, 'recentlyBusinessDate': None, 'recordNum': 4, 'ruleName': '是否计提应交增值税-科研事业收入', 'warnDays': 19, 'warnLevel': '1', 'warnTime': '2020-05-28 15:07:55'}, {'businessDate': '2019-12-12', 'code': '201912Q 9638', 'creditMoney': 3100000.0, 'debitMoney': 3100000.0, 'id': 1446, 'isDelRecord': 0, 'issue': '支出管理-税务管理', 'name': '201912Q 9638', 'projectCategory': None, 'projectType': None, 'read': 0, 'recentlyBusinessDate': None, 'recordNum': 4, 'ruleName': '是否计提应交增值税-科研事业收入', 'warnDays': 19, 'warnLevel': '1', 'warnTime': '2020-05-28 15:07:55'}, {'businessDate': '2019-12-12', 'code': '201912Q 9573', 'creditMoney': 4000000.0, 'debitMoney': 4000000.0, 'id': 1445, 'isDelRecord': 0, 'issue': '支出管理-税务管理', 'name': '201912Q 9573', 'projectCategory': None, 'projectType': None, 'read': 0, 'recentlyBusinessDate': None, 'recordNum': 4, 'ruleName': '是否计提应交增值税-科研事业收入', 'warnDays': 19, 'warnLevel': '1', 'warnTime': '2020-05-28 15:07:55'}, {'businessDate': '2019-12-11', 'code': '201912Q 8718', 'creditMoney': 2500000.0, 'debitMoney': 2500000.0, 'id': 1444, 'isDelRecord': 0, 'issue': '支出管理-税务管理', 'name': '201912Q 8718', 'projectCategory': None, 'projectType': None, 'read': 0, 'recentlyBusinessDate': None, 'recordNum': 4, 'ruleName': '是否计提应交增值税-科研事业收入', 'warnDays': 19, 'warnLevel': '1', 'warnTime': '2020-05-28 15:07:55'}, {'businessDate': '2019-12-11', 'code': '201912Q 8677', 'creditMoney': 2000000.0, 'debitMoney': 2000000.0, 'id': 1443, 'isDelRecord': 0, 'issue': '支出管理-税务管理', 'name': '201912Q 8677', 'projectCategory': None, 'projectType': None, 'read': 0, 'recentlyBusinessDate': None, 'recordNum': 4, 'ruleName': '是否计提应交增值税-科研事业收入', 'warnDays': 19, 'warnLevel': '1', 'warnTime': '2020-05-28 15:07:55'}, {'businessDate': '2019-12-11', 'code': '201912Q 8379', 'creditMoney': 2000000.0, 'debitMoney': 2000000.0, 'id': 1442, 'isDelRecord': 0, 'issue': '支出管理-税务管理', 'name': '201912Q 8379', 'projectCategory': None, 'projectType': None, 'read': 0, 'recentlyBusinessDate': None, 'recordNum': 4, 'ruleName': '是否计提应交增值税-科研事业收入', 'warnDays': 19, 'warnLevel': '1', 'warnTime': '2020-05-28 15:07:55'}, {'businessDate': '2019-12-11', 'code': '201912Q 8344', 'creditMoney': 3000000.0, 'debitMoney': 3000000.0, 'id': 1441, 'isDelRecord': 0, 'issue': '支出管理-税务管理', 'name': '201912Q 8344', 'projectCategory': None, 'projectType': None, 'read': 0, 'recentlyBusinessDate': None, 'recordNum': 4, 'ruleName': '是否计提应交增值税-科研事业收入', 'warnDays': 19, 'warnLevel': '1', 'warnTime': '2020-05-28 15:07:55'}, {'businessDate': '2019-12-02', 'code': '201912Q 595', 'creditMoney': 3100000.0, 'debitMoney': 3100000.0, 'id': 1439, 'isDelRecord': 0, 'issue': '支出管理-税务管理', 'name': '201912Q 595', 'projectCategory': None, 'projectType': None, 'read': 0, 'recentlyBusinessDate': None, 'recordNum': 4, 'ruleName': '是否计提应交增值税-科研事业收入', 'warnDays': 19, 'warnLevel': '1', 'warnTime': '2020-05-28 15:07:55'}, {'businessDate': '2019-12-04', 'code': '201912Q 2305', 'creditMoney': 3000000.0, 'debitMoney': 3000000.0, 'id': 1438, 'isDelRecord': 0, 'issue': '支出管理-税务管理', 'name': '201912Q 2305', 'projectCategory': None, 'projectType': None, 'read': 0, 'recentlyBusinessDate': None, 'recordNum': 4, 'ruleName': '是否计提应交增值税-科研事业收入', 'warnDays': 19, 'warnLevel': '1', 'warnTime': '2020-05-28 15:07:55'}], 'searchCount': True, 'size': 10, 'total': 244}, 'message': None, 'otherData': {}, 'status': True}"
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
 <tr id='total_row' class="text-center active">
     <td>总计</td>
-    <td>2</td>
+    <td>3</td>
     <td>2</td>
     <td>0</td>
-    <td>0</td>
-    <td>通过率：100.00%</td>
+    <td>1</td>
+    <td>通过率：66.67%</td>
 </tr>
 </table>
 

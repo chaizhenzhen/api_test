@@ -46,7 +46,7 @@ receiver_two='1057835410@qq.com'
 subject='接口测试报告'   #邮件主题
 
 
-# 头文件配置
+# 获取登录session的相关文件配置
 request_headers= {
             "Accept": "application/json, text/plain, */*",
             "Accept-Encoding": "gzip, deflate",
@@ -58,4 +58,9 @@ request_headers= {
             "Origin": "http://172.16.170.49",
             "Referer": "http://172.16.170.49/supervise/",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
+        }
+url_login='http://172.16.170.49/cms/api/user/login'
+requests_string_login={
+            "sn": "test",
+            "password": "D5BCF1D75F6C61A276B0701AC2933765"
         }
