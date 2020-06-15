@@ -48,5 +48,5 @@ class DB:
         self.change("insert into t_user (name,email,phone_num,sn,status) values ('{}','{}','{}','{}')".format(userName,email,phoneNum,sn,status))
 
 
-db=DB()
+database=DB()
 # db.check_user('test')

@@ -1,4 +1,5 @@
 from test.user.test_user_login import TestUserLogin
+from test.rule_test.rule_special import TestRuleSpecial
 import unittest
 import HTMLTestRunner
 from lib.send_email import *
@@ -9,6 +10,7 @@ logging.debug('=======================测试开始=======================')
 # 添加测试集
 suite=unittest.TestSuite()
 suite.addTests([TestUserLogin("test_user_login_noraml"),TestUserLogin("test_user_login_wrong")])
+suite.addTest(TestRuleSpecial("test_rule_special_keyanshouru"))
 # suite=unittest.defaultTestLoader.discover("./")
 # unittest.TextTestRunner(suite)
 
