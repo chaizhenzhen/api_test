@@ -26,6 +26,7 @@ class TestRuleSpecial(unittest.TestCase):
 
         # 请求参数
         request_string = case_data.get('args')
+
         # 用sql查询结果,结果是元组
         response_sql_expect = database.query(sql_keyanshouru)
         response_sql_expect_list = []
