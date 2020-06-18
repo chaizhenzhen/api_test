@@ -1,5 +1,5 @@
-from test.user.test_user_login import TestUserLogin
-from test.rule_test.rule_special import TestRuleSpecial
+from test.case.user.test_user_login import TestUserLogin
+from test.case.rule_test.rule_special import TestRuleSpecial
 import unittest
 import HTMLTestRunner
 from lib.send_email import *

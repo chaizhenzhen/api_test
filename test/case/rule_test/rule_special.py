@@ -1,4 +1,6 @@
 import unittest
+import sys
+sys.path.append("../..")
 from lib.read_excel import *
 import os
 from config.config import *

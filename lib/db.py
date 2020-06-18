@@ -1,7 +1,7 @@
 import pymysql
 import os
 import sys
-sys.path.append("..")
+sys.path.append("../..")
 from config.config import *
 # 1.建立连接
 

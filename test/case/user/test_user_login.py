@@ -2,6 +2,8 @@ import unittest
 import requests
 import os
 import sys
+sys.path.append("../..")
+from test.case.basecase import *
 from lib.read_excel import *
 from config.config import *
 import json

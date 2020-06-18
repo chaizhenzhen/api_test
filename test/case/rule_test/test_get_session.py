@@ -2,6 +2,8 @@
 # import json
 
 # from config.config import *
+import sys
+sys.path.append("../..")
 from lib.got_session import *
 
 # 本文件测试session是否可以正常获取
